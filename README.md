@@ -85,9 +85,9 @@ dart pub global activate fvm
 
 ## Flutter 버전 설정하기
 
-### 1. Flutter 3.24.5 설치
+### 1. 지정된 Flutter 버전 설치
 ```bash
-fvm install 3.24.5
+fvm install
 ```
 > 이 명령어는 Flutter 3.24.5 버전을 다운로드하고 설치합니다.
 
