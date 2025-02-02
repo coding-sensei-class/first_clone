@@ -1,8 +1,6 @@
 # Flutter 프로젝트 시작하기 (초보자용)
-
 ## SSH란?
 SSH(Secure Shell)는 '보안이 강화된 셸'이라는 뜻으로, 1995년에 만들어진 네트워크 프로토콜입니다. 비유하자면 '디지털 신분증'과 같습니다.
-
 쉽게 설명하면:
 - 일반 비밀번호는 매번 입력해야 하고 해킹될 위험이 있지만,
 - SSH는 한 번 설정하면 자동으로 안전하게 인증이 되는 방식입니다.
@@ -31,7 +29,6 @@ ssh-keygen -t ed25519 -C "your_email@example.com"
 2. "암호 입력" → 엔터 2번 누르기 (암호 없이 설정)
 
 ### 2. 생성된 SSH 키 복사하기
-
 #### macOS 사용자
 ```bash
 cat ~/.ssh/id_ed25519.pub | pbcopy
@@ -65,6 +62,14 @@ git clone git@github.com:username/repository.git
 ```
 > ⚠️ 실제 repository 주소는 GitHub의 초록색 "Code" 버튼을 클릭하고 SSH 탭에서 복사할 수 있습니다.
 
+## Flutter 프로젝트 생성하기
+### 1. 새 프로젝트 생성
+프로젝트를 생성할 디렉토리로 이동한 후, 다음 명령어를 실행합니다:
+```bash
+flutter create .
+```
+> 이 명령어는 현재 디렉토리에 Flutter 프로젝트를 생성합니다.
+
 ## FVM 설치하기
 > 여러 Flutter 버전을 효율적으로 관리하기 위한 도구입니다.
 
@@ -84,7 +89,6 @@ dart pub global activate fvm
 > ⚠️ Dart SDK가 설치되어 있어야 합니다.
 
 ## Flutter 버전 설정하기
-
 ### 1. 지정된 Flutter 버전 설치
 ```bash
 fvm install
@@ -93,13 +97,17 @@ fvm install
 
 ### 2. 프로젝트에 Flutter 버전 적용
 ```bash
-cd your_project  # 프로젝트 폴더로 이동
 fvm use 3.24.5   # 해당 버전 사용 설정
 ```
-> `cd your_project` 부분은 실제 프로젝트 경로로 변경해주세요.
+
+### 3. 프로젝트 실행 확인
+프로젝트가 정상적으로 생성되었는지 확인하기 위해:
+```bash
+fvm flutter run
+```
+> ⚠️ 실행하기 전에 에뮬레이터나 실제 기기가 연결되어 있어야 합니다.
 
 ## IDE 설정하기 ( 문제가 발생하는 경우에만 )
-
 ### VS Code 사용자
 1. VS Code 실행
 2. 프로젝트 폴더에서 `.vscode` 폴더 생성
@@ -121,9 +129,7 @@ fvm use 3.24.5   # 해당 버전 사용 설정
 5. Apply → OK 클릭
 
 ## 그 외의 문제가 발생하는 경우
-
 위 가이드에서 다루지 않은 문제가 발생하면, GitHub 저장소에서 이슈를 작성할 수 있습니다:
-
 1. [GitHub Issues](https://github.com/coding-sensei-class/first_clone/issues) 페이지 방문
 2. "New issue" 버튼 클릭
 3. 문제 상황을 자세히 설명:
